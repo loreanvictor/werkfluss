@@ -1,0 +1,25 @@
+{
+  "name": "werkfluss",
+  "version": "0.0.1",
+  "description": "an experiment to see how vercel workflows would look like without magical directives",
+  "homepage": "https://github.com/loreanvictor/werkfluss#readme",
+  "bugs": {
+    "url": "https://github.com/loreanvictor/werkfluss/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loreanvictor/werkfluss.git"
+  },
+  "license": "MIT",
+  "author": "Eugene Ghanizadeh Khoub",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "caller-callsite": "^6.0.0",
+    "devalue": "^5.4.2",
+    "sleep-promise": "^9.1.0"
+  }
+}
