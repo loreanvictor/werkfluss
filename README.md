@@ -4,7 +4,7 @@ an experiment to see how [vercel workflows](https://useworkflow.dev) would look 
 without magical directives. turns out, like this:
 
 ```js
-import { step, workflow, start, hook, sleep } from 'werkfluss'
+import { step, workflow, hook, sleep } from 'werkfluss'
 
 const fetchDataForUser = step(async (userId) => { ... })
 const saveSomethingToDb = step(async (data) => { ... })
@@ -30,7 +30,7 @@ const myWorkflow = workflow(async (userId) => {
   return 'done'
 })
 
-start(myWorkflow, 'user-123')
+await myWorkflow('user-123')
 ```
 
 while this is a mock-up, to be able to deduce the correct interface, interfaces similar to what would

@@ -1,5 +1,5 @@
 import delay from 'sleep-promise'
-import { step, workflow, hook, invokeHook, start, sleep } from './lib.mjs'
+import { step, workflow, hook, invokeHook, sleep } from './lib.mjs'
 import { logs } from './lib/log.mjs'
 
 const a = step(async (i) => { console.log(`AAA: ${i}`) })
@@ -24,7 +24,7 @@ const wf = workflow(async (i) => {
   return i * 42 + j
 })
 
-start(wf, 1).then(console.log).catch(console.error)
+wf(1).then(console.log).catch(console.error)
 
 setTimeout(() => invokeHook(hi, 42), 600)
 setTimeout(() => console.log(logs()), 1000)
